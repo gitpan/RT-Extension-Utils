@@ -67,3 +67,23 @@ foreach my $t (qw(Ticket Group)) {
     );
 }
 
+my %type_and_table = (
+    ObjectCustomFieldValues => 'RT::ObjectCustomFieldValue',
+    Attachments             => 'RT::Attachment',
+    Transactions            => 'RT::Transaction',
+    Tickets                 => 'RT::Ticket',
+    Groups                  => 'RT::Group',
+    CachedGroupMembers      => 'RT::CachedGroupMember',
+    GroupMembers            => 'RT::GroupMember',
+    Principals              => 'RT::Principal',
+);
+
+while ( my ($table, $type) = each %type_and_table ) {
+    $dbh->do(
+        "DELETE t.* FROM Attributes t LEFT JOIN $type c
+            ON c.id = t.ObjectId
+            WHERE t.ObjectType = ? AND c.id IS NULL",
+        undef, $type
+    );
+}
+

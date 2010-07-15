@@ -1,3 +1,7 @@
+0.02 2010-07-15
+
+    * delete attributes when we delete objects
+
 0.01 2010-01-29
 
     * initial release
