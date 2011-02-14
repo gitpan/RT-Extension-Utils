@@ -80,7 +80,7 @@ my %type_and_table = (
 
 while ( my ($table, $type) = each %type_and_table ) {
     $dbh->do(
-        "DELETE t.* FROM Attributes t LEFT JOIN $type c
+        "DELETE t.* FROM Attributes t LEFT JOIN $table c
             ON c.id = t.ObjectId
             WHERE t.ObjectType = ? AND c.id IS NULL",
         undef, $type

@@ -16,6 +16,8 @@ MANIFEST			This list of files
 META.yml
 README
 sbin/rt-check-user-right-on-ticket
+sbin/rt-custom-fields-initialdata
 sbin/rt-delete-tickets-mysql
+sbin/rt-enable-disabled-users
 sbin/rt-extract-attachment
 sbin/rt-session-dump
