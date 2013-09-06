@@ -1,4 +1,8 @@
-0.04 2011-04-03
+0.06 2013-09-06
+
+    * fixed typo in shebang string rt-check-user-right-on-ticket
+
+0.05 2011-04-03
 
     * fix manifest
 

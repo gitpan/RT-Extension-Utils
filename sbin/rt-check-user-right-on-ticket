@@ -1,11 +1,11 @@
-#!/usr/bin/evn perl
+#!/usr/bin/env perl
 
 use 5.008003;
 use strict;
 use warnings;
 
 ### after: use lib qw(@RT_LIB_PATH@);
-use lib qw(/opt/rt3/local/lib /opt/rt3/lib);
+use lib qw(/opt/rt4/local/lib /opt/rt4/lib);
 
 =head1 NAME
 
